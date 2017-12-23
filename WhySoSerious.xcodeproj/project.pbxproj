@@ -57,6 +57,7 @@
 		4A45927A1FDCDB1900450CFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4592781FDCDB1900450CFC /* Main.storyboard */; };
 		4A45927C1FDCDB1900450CFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A45927B1FDCDB1900450CFC /* Assets.xcassets */; };
 		4A45927F1FDCDB1900450CFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A45927D1FDCDB1900450CFC /* LaunchScreen.storyboard */; };
+		4A88F2681FEE64AA00A86DA1 /* ResolutionCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A88F2671FEE64AA00A86DA1 /* ResolutionCenter.swift */; };
 		4A9721DB1FE2E75A00A5A981 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9721D41FE2E75A00A5A981 /* RxSwift.framework */; };
 		4A9721DC1FE2E75A00A5A981 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9721D51FE2E75A00A5A981 /* RxCocoa.framework */; };
 		4A9721DD1FE2E75A00A5A981 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9721D61FE2E75A00A5A981 /* Alamofire.framework */; };
@@ -342,6 +343,7 @@
 		4A45927B1FDCDB1900450CFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A45927E1FDCDB1900450CFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A4592801FDCDB1900450CFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A88F2671FEE64AA00A86DA1 /* ResolutionCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolutionCenter.swift; sourceTree = "<group>"; };
 		4A9721D41FE2E75A00A5A981 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		4A9721D51FE2E75A00A5A981 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		4A9721D61FE2E75A00A5A981 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -606,6 +608,7 @@
 		4A2D09A11FE297E3002CCED0 /* ResolutionCenter */ = {
 			isa = PBXGroup;
 			children = (
+				4A88F2671FEE64AA00A86DA1 /* ResolutionCenter.swift */,
 				4A2D09A21FE297E3002CCED0 /* ResolutionCenter.h */,
 				4A2D09A31FE297E3002CCED0 /* Info.plist */,
 			);
@@ -1286,6 +1289,7 @@
 					};
 					4A2D099F1FE297E3002CCED0 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					4A2D09A71FE297E3002CCED0 = {
@@ -1634,6 +1638,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A88F2681FEE64AA00A86DA1 /* ResolutionCenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2263,6 +2268,7 @@
 		4A2D09B81FE297E3002CCED0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2277,6 +2283,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mashup.ResolutionCenter;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2287,6 +2294,7 @@
 		4A2D09B91FE297E3002CCED0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2690,6 +2698,7 @@
 		4A4592841FDCDB1900450CFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QQ553UUGK3;
@@ -2710,6 +2719,7 @@
 		4A4592851FDCDB1900450CFC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QQ553UUGK3;
