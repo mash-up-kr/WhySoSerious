@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F9E2FE71FEE201B009E20E9 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9E2FE61FEE201B009E20E9 /* UserDefaults.swift */; };
 		4A2D08FE1FE29750002CCED0 /* APIRouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A2D08F51FE29750002CCED0 /* APIRouter.framework */; };
 		4A2D09051FE29750002CCED0 /* APIRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2D09041FE29750002CCED0 /* APIRouterTests.swift */; };
 		4A2D09071FE29750002CCED0 /* APIRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A2D08F71FE29750002CCED0 /* APIRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -281,6 +282,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1F9E2FE61FEE201B009E20E9 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		4A2D08F51FE29750002CCED0 /* APIRouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = APIRouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A2D08F71FE29750002CCED0 /* APIRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIRouter.h; sourceTree = "<group>"; };
 		4A2D08F81FE29750002CCED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -552,6 +554,7 @@
 		4A2D093B1FE297A9002CCED0 /* UserDefaults */ = {
 			isa = PBXGroup;
 			children = (
+				1F9E2FE61FEE201B009E20E9 /* UserDefaults.swift */,
 				4A2D093C1FE297A9002CCED0 /* UserDefaults.h */,
 				4A2D093D1FE297A9002CCED0 /* Info.plist */,
 			);
@@ -1259,6 +1262,7 @@
 					};
 					4A2D09391FE297A9002CCED0 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					4A2D09411FE297A9002CCED0 = {
@@ -1589,6 +1593,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F9E2FE71FEE201B009E20E9 /* UserDefaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2023,6 +2028,7 @@
 		4A2D09521FE297A9002CCED0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2037,6 +2043,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mashup.UserDefaults;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2047,6 +2054,7 @@
 		4A2D09531FE297A9002CCED0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2690,9 +2698,10 @@
 		4A4592841FDCDB1900450CFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QQ553UUGK3;
+				DEVELOPMENT_TEAM = Q56Q2F5ZFU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -2710,9 +2719,10 @@
 		4A4592851FDCDB1900450CFC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QQ553UUGK3;
+				DEVELOPMENT_TEAM = Q56Q2F5ZFU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
