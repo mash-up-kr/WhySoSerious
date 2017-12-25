@@ -14,7 +14,7 @@ public enum ServerDomain: String {
     case real = "http://172.20.10.10:8081"
 }
 
-public protocol API {
+public protocol APIRouter {
 
     var domain: ServerDomain { get }
     var endPoint: EndPoint? { get }

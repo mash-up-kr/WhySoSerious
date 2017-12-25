@@ -16,7 +16,7 @@ struct NetworkRequestor {
     private static let manager = Alamofire.SessionManager.default
 
     typealias Completion = ((JSON?, Error?) -> Void)?
-    static func request(_ api: API, completion: Completion) {
+    static func request(_ api: APIRouter, completion: Completion) {
         manager.session.configuration.timeoutIntervalForRequest = 15
         let endPoint = api.endPoint ?? EndPoint()
         let url = api.domain.rawValue + endPoint.path

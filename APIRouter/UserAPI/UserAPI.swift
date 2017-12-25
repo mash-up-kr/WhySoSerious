@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum UserAPI: API {
+public enum UserAPIRouter: APIRouter {
 
     case register(User)
     case getUserInfo(User)
