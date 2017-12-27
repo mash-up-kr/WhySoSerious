@@ -13,8 +13,8 @@ public struct User {
     let uuid: String
     let id: Int
     let nickname: String
-    let age: Int?
-    let gender: Gender?
+    let age: Int
+    let gender: Gender
     let bias: UserBias
     let introduce: String?
 
@@ -23,51 +23,81 @@ public struct User {
             "uuid": uuid,
             "id": id,
             "nickname": nickname,
-            "age": age ?? 0,
+            "age": age,
             "bias": bias.rawValue,
             "introduce": introduce ?? "",
-            "gender": gender?.rawValue ?? ""
+            "gender": gender.rawValue
         ]
     }
 }
 
 enum Gender: String {
 
-    case MALE
-    case FEMALE
+    case male
+    case female
+}
 
+extension Gender: RawRepresentable {
+   
     init?(rawValue: String) {
         switch rawValue {
         case "MALE":
-            self = .MALE
+            self = .male
         case "FEMALE":
-            self = .FEMALE
+            self = .female
         default: return nil
+        }
+    }
+    
+    var rawValue: String {
+        switch self {
+        case .male:
+            return "MALE"
+        case .female:
+            return "FEMALE"
         }
     }
 }
 
 enum UserBias: String {
 
-    case BLUE = "EXTREME_LEFT"
-    case SKYBLUE = "LEFT"
-    case MID = "MID"
-    case ORANGE = "RIGHT"
-    case RED = "EXTREME_RIGHT"
+    case blue
+    case skyblue
+    case mid
+    case orange
+    case red
+}
 
+extension UserBias: RawRepresentable {
+    
     init?(rawValue: String) {
         switch rawValue {
         case "EXTREME_LEFT":
-            self = .BLUE
+            self = .blue
         case "LEFT":
-            self = .SKYBLUE
+            self = .skyblue
         case "MID":
-            self = .MID
+            self = .mid
         case "RIGHT":
-            self = .ORANGE
+            self = .orange
         case "EXTREME_RIGHT":
-            self = .RED
+            self = .red
         default: return nil
+        }
+    }
+    
+    var rawValue: String {
+        switch self {
+        case .blue:
+            return "EXTREME_LEFT"
+        case .skyblue:
+            return "LEFT"
+        case .mid:
+            return "MID"
+        case .orange:
+            return "RIGHT"
+        case .red:
+            return "EXTREME_RIGHT"
         }
     }
 }

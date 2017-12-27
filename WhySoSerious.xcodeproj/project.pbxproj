@@ -65,13 +65,11 @@
 		4A9721E01FE2E75A00A5A981 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9721D91FE2E75A00A5A981 /* SnapKit.framework */; };
 		4A9721E11FE2E75A00A5A981 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9721DA1FE2E75A00A5A981 /* Reachability.framework */; };
 		670E064B1FE3676B0085E5BE /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670E064A1FE3676B0085E5BE /* APIRouter.swift */; };
-		670E064F1FE4D8550085E5BE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9721D61FE2E75A00A5A981 /* Alamofire.framework */; };
 		675C3C401FF011A2009DFF28 /* APIRouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A2D08F51FE29750002CCED0 /* APIRouter.framework */; };
 		6763D2711FF0046000FC778E /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6763D2701FF0046000FC778E /* UserAPI.swift */; };
 		6763D2741FF0055500FC778E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6763D2731FF0055500FC778E /* User.swift */; };
 		67B3E4781FE5787200BD0126 /* NetworkRequestor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B3E4771FE5787200BD0126 /* NetworkRequestor.swift */; };
 		67D2EE0B1FEFFEAA00F58D07 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670E064D1FE4D76C0085E5BE /* EndPoint.swift */; };
-		67F6FC7E1FF018A700AD79E5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9721D61FE2E75A00A5A981 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -369,7 +367,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67F6FC7E1FF018A700AD79E5 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +383,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				675C3C401FF011A2009DFF28 /* APIRouter.framework in Frameworks */,
-				670E064F1FE4D8550085E5BE /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
