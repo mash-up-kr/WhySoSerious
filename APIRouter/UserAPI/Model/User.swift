@@ -38,7 +38,7 @@ enum Gender: String {
 }
 
 extension Gender: RawRepresentable {
-   
+
     init?(rawValue: String) {
         switch rawValue {
         case "MALE":
@@ -48,7 +48,7 @@ extension Gender: RawRepresentable {
         default: return nil
         }
     }
-    
+
     var rawValue: String {
         switch self {
         case .male:
@@ -69,7 +69,7 @@ enum UserBias: String {
 }
 
 extension UserBias: RawRepresentable {
-    
+
     init?(rawValue: String) {
         switch rawValue {
         case "EXTREME_LEFT":
@@ -85,7 +85,7 @@ extension UserBias: RawRepresentable {
         default: return nil
         }
     }
-    
+
     var rawValue: String {
         switch self {
         case .blue:

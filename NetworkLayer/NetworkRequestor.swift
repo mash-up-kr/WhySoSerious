@@ -18,9 +18,7 @@ struct NetworkRequestor {
     typealias Completion = ((JSON?, Error?) -> Void)?
     static func request(_ api: APIRouter, completion: Completion) {
         manager.session.configuration.timeoutIntervalForRequest = 15
-        let endPoint = api.endPoint ?? EndPoint()
-        let url = api.domain.rawValue + endPoint.path
-        manager.request(url, method: endPoint.method, parameters: endPoint.parameters, encoding: JSONEncoding.default, headers: endPoint.headers).responseJSON { response in
+        manager.request(api.requestUrl, method: api.endPoint.method, parameters: api.parameters, encoding: JSONEncoding.default, headers: api.headers).responseJSON { response in
             switch response.result {
             case .success:
                 if let data = response.data {

@@ -11,18 +11,11 @@ import Alamofire
 
 public struct EndPoint {
 
-    public typealias Parameters = [String: Any]
-    public typealias HTTPHeaders = [String: String]
-
     public var path: String
     public var method: HTTPMethod
-    public var parameters: Parameters?
-    public var headers: HTTPHeaders?
 
-    public init(path: String = "", method: HTTPMethod = .get, parameters: Parameters? = nil, headers: HTTPHeaders? = nil) {
+    public init(path: String = "", method: HTTPMethod = .get) {
         self.path = path
         self.method = method
-        self.parameters = parameters
-        self.headers = headers
     }
 }

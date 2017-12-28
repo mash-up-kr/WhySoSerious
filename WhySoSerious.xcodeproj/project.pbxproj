@@ -66,7 +66,7 @@
 		4A9721E11FE2E75A00A5A981 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9721DA1FE2E75A00A5A981 /* Reachability.framework */; };
 		670E064B1FE3676B0085E5BE /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670E064A1FE3676B0085E5BE /* APIRouter.swift */; };
 		675C3C401FF011A2009DFF28 /* APIRouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A2D08F51FE29750002CCED0 /* APIRouter.framework */; };
-		6763D2711FF0046000FC778E /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6763D2701FF0046000FC778E /* UserAPI.swift */; };
+		6763D2711FF0046000FC778E /* UserAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6763D2701FF0046000FC778E /* UserAPIRouter.swift */; };
 		6763D2741FF0055500FC778E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6763D2731FF0055500FC778E /* User.swift */; };
 		67B3E4781FE5787200BD0126 /* NetworkRequestor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B3E4771FE5787200BD0126 /* NetworkRequestor.swift */; };
 		67D2EE0B1FEFFEAA00F58D07 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670E064D1FE4D76C0085E5BE /* EndPoint.swift */; };
@@ -357,7 +357,7 @@
 		4A9721DA1FE2E75A00A5A981 /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = Carthage/Build/iOS/Reachability.framework; sourceTree = "<group>"; };
 		670E064A1FE3676B0085E5BE /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		670E064D1FE4D76C0085E5BE /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
-		6763D2701FF0046000FC778E /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		6763D2701FF0046000FC778E /* UserAPIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIRouter.swift; sourceTree = "<group>"; };
 		6763D2731FF0055500FC778E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		67B3E4771FE5787200BD0126 /* NetworkRequestor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -822,7 +822,7 @@
 		67F6FC811FF01D9500AD79E5 /* UserAPI */ = {
 			isa = PBXGroup;
 			children = (
-				6763D2701FF0046000FC778E /* UserAPI.swift */,
+				6763D2701FF0046000FC778E /* UserAPIRouter.swift */,
 				6763D2751FF0055900FC778E /* Model */,
 			);
 			path = UserAPI;
@@ -1604,7 +1604,7 @@
 				6763D2741FF0055500FC778E /* User.swift in Sources */,
 				67D2EE0B1FEFFEAA00F58D07 /* EndPoint.swift in Sources */,
 				670E064B1FE3676B0085E5BE /* APIRouter.swift in Sources */,
-				6763D2711FF0046000FC778E /* UserAPI.swift in Sources */,
+				6763D2711FF0046000FC778E /* UserAPIRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import Alamofire
 
-public enum ServerDomain: String {
+public enum ServerBaseUrl: String {
 
     case dev = "http://172.20.10.10:8080"
     case real = "http://172.20.10.10:8081"
@@ -16,6 +17,23 @@ public enum ServerDomain: String {
 
 public protocol APIRouter {
 
-    var domain: ServerDomain { get }
-    var endPoint: EndPoint? { get }
+    typealias Parameters = [String: Any]
+    typealias HTTPHeaders = [String: String]
+
+    var endPoint: EndPoint { get }
+
+    var headers: HTTPHeaders? { get }
+
+    var parameters: Parameters? { get }
+}
+
+public extension APIRouter {
+
+    var requestUrl: String {
+        return baseUrl.rawValue + endPoint.path
+    }
+
+    var baseUrl: ServerBaseUrl {
+        return .dev
+    }
 }
