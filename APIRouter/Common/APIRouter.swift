@@ -11,7 +11,7 @@ import Alamofire
 
 public enum ServerBaseUrl: String {
 
-    case dev = "http://172.20.10.10:8080"
+    case dev = "http://ec2-13-124-227-154.ap-northeast-2.compute.amazonaws.com:8080"
     case real = "http://172.20.10.10:8081"
 }
 

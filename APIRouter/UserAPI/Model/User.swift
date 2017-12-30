@@ -10,28 +10,30 @@ import Foundation
 
 public struct User {
 
-    let uuid: String
-    let id: Int
-    let nickname: String
-    let age: Int
-    let gender: Gender
-    let bias: UserBias
-    let introduce: String?
+    public var uuid = ""
+    public var id = 0
+    public var nickname = ""
+    public var age = 0
+    public var gender = Gender.male
+    public var bias = UserBias.red
+    public var introduce = ""
 
-    var dictionaryRepresentation: [String: Any] {
+    public var dictionaryRepresentation: [String: Any] {
         return [
             "uuid": uuid,
             "id": id,
             "nickname": nickname,
             "age": age,
             "bias": bias.rawValue,
-            "introduce": introduce ?? "",
+            "introduce": introduce,
             "gender": gender.rawValue
         ]
     }
+
+    public init() { }
 }
 
-enum Gender: String {
+public enum Gender: String {
 
     case male
     case female
@@ -39,7 +41,7 @@ enum Gender: String {
 
 extension Gender: RawRepresentable {
 
-    init?(rawValue: String) {
+    public init?(rawValue: String) {
         switch rawValue {
         case "MALE":
             self = .male
@@ -49,7 +51,7 @@ extension Gender: RawRepresentable {
         }
     }
 
-    var rawValue: String {
+    public var rawValue: String {
         switch self {
         case .male:
             return "MALE"
@@ -59,7 +61,7 @@ extension Gender: RawRepresentable {
     }
 }
 
-enum UserBias: String {
+public enum UserBias: String {
 
     case blue
     case skyblue
@@ -70,7 +72,7 @@ enum UserBias: String {
 
 extension UserBias: RawRepresentable {
 
-    init?(rawValue: String) {
+    public init?(rawValue: String) {
         switch rawValue {
         case "EXTREME_LEFT":
             self = .blue
@@ -86,7 +88,7 @@ extension UserBias: RawRepresentable {
         }
     }
 
-    var rawValue: String {
+    public var rawValue: String {
         switch self {
         case .blue:
             return "EXTREME_LEFT"

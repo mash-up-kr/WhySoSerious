@@ -11,12 +11,12 @@ import Alamofire
 import SwiftyJSON
 import APIRouter
 
-struct NetworkRequestor {
+public struct NetworkRequestor {
 
     private static let manager = Alamofire.SessionManager.default
 
-    typealias Completion = ((JSON?, Error?) -> Void)?
-    static func request(_ api: APIRouter, completion: Completion) {
+    public typealias Completion = ((JSON?, Error?) -> Void)?
+    public static func request(_ api: APIRouter, completion: Completion) {
         manager.session.configuration.timeoutIntervalForRequest = 15
         manager.request(api.requestUrl, method: api.endPoint.method, parameters: api.parameters, encoding: JSONEncoding.default, headers: api.headers).responseJSON { response in
             switch response.result {
