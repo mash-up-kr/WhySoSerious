@@ -1,15 +1,15 @@
 //
-//  LogerTests.swift
-//  LogerTests
+//  LoggerTests.swift
+//  LoggerTests
 //
-//  Created by Naver on 2017. 12. 14..
+//  Created by Naver on 2017. 12. 23..
 //  Copyright © 2017년 MashUp. All rights reserved.
 //
 
 import XCTest
-@testable import Loger
+@testable import Logger
 
-class LogerTests: XCTestCase {
+class LoggerTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
