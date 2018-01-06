@@ -56,6 +56,7 @@
 		4A45927A1FDCDB1900450CFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4592781FDCDB1900450CFC /* Main.storyboard */; };
 		4A45927C1FDCDB1900450CFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A45927B1FDCDB1900450CFC /* Assets.xcassets */; };
 		4A45927F1FDCDB1900450CFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A45927D1FDCDB1900450CFC /* LaunchScreen.storyboard */; };
+		4A5C362E2000AAD200BA7153 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5C362D2000AAD200BA7153 /* Lottie.framework */; };
 		4A88F2681FEE64AA00A86DA1 /* ResolutionCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A88F2671FEE64AA00A86DA1 /* ResolutionCenter.swift */; };
 		4A88F2791FEE6FD300A86DA1 /* Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A88F2701FEE6FD300A86DA1 /* Logger.framework */; };
 		4A88F2801FEE6FD300A86DA1 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A88F27F1FEE6FD300A86DA1 /* LoggerTests.swift */; };
@@ -382,6 +383,7 @@
 		4A45927B1FDCDB1900450CFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A45927E1FDCDB1900450CFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A4592801FDCDB1900450CFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A5C362D2000AAD200BA7153 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		4A88F2671FEE64AA00A86DA1 /* ResolutionCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolutionCenter.swift; sourceTree = "<group>"; };
 		4A88F2701FEE6FD300A86DA1 /* Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A88F2721FEE6FD300A86DA1 /* Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
@@ -590,6 +592,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A5C362E2000AAD200BA7153 /* Lottie.framework in Frameworks */,
 				4A88F2D91FEE7E0800A86DA1 /* ObjcExceptionBridging.framework in Frameworks */,
 				4A88F2911FEE70C800A86DA1 /* XCGLogger.framework in Frameworks */,
 				4A9721DB1FE2E75A00A5A981 /* RxSwift.framework in Frameworks */,
@@ -910,6 +913,7 @@
 		4A9721D31FE2E75A00A5A981 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A5C362D2000AAD200BA7153 /* Lottie.framework */,
 				4A88F2D81FEE7E0800A86DA1 /* ObjcExceptionBridging.framework */,
 				4A88F2901FEE70C800A86DA1 /* XCGLogger.framework */,
 				4A9721D61FE2E75A00A5A981 /* Alamofire.framework */,
@@ -2096,6 +2100,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/XCGLogger.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ObjcExceptionBridging.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Lottie.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
