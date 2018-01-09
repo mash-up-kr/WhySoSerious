@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Yu-tg-hS8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bell View Controller-->
+        <scene sceneID="AsT-f1-hWY">
+            <objects>
+                <viewController id="bDg-2C-yUf" customClass="BellViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nvw-VH-4q7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="fRj-j0-Kes"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sFm-LW-PoJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H6n-Wk-OMY" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34" y="134"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="V3g-Fb-Dal">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Yu-tg-hS8" customClass="BaseNavigationController" customModule="WhySoSerious" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="NAX-eo-Ae3"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="d2d-WH-cSW">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bDg-2C-yUf" kind="relationship" relationship="rootViewController" id="iIT-99-eDw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ls2-Ty-lMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-871" y="134"/>
+        </scene>
+    </scenes>
+</document>
