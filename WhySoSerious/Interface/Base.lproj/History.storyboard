@@ -4,23 +4,63 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--History View Controller-->
+        <!--히스토리-->
         <scene sceneID="vXk-Go-LUf">
             <objects>
-                <viewController id="jSK-7z-zpp" customClass="HistoryViewController" sceneMemberID="viewController">
+                <viewController id="jSK-7z-zpp" customClass="HistoryViewController" customModule="WhySoSerious" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Zd-Po-1UW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ovp-yl-a4V">
+                                <rect key="frame" x="0.0" y="116" width="375" height="502"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryCell" id="B7R-fo-1kK" customClass="HistoryCell" customModule="WhySoSerious" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B7R-fo-1kK" id="z2r-Bk-JyY">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLS-jr-tAm">
+                                                    <rect key="frame" x="34" y="12" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JLS-jr-tAm" secondAttribute="trailing" id="5dX-jk-d8V"/>
+                                                <constraint firstItem="JLS-jr-tAm" firstAttribute="leading" secondItem="z2r-Bk-JyY" secondAttribute="leading" constant="34" id="DJc-9e-K1r"/>
+                                                <constraint firstItem="JLS-jr-tAm" firstAttribute="centerY" secondItem="z2r-Bk-JyY" secondAttribute="centerY" id="EBg-bW-aKU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="subjectTitleLabel" destination="JLS-jr-tAm" id="Wqf-bo-J6J"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ovp-yl-a4V" firstAttribute="leading" secondItem="bXF-4l-RtH" secondAttribute="leading" id="3NC-Vi-9f4"/>
+                            <constraint firstItem="Ovp-yl-a4V" firstAttribute="trailing" secondItem="bXF-4l-RtH" secondAttribute="trailing" id="HGG-Bw-0b0"/>
+                            <constraint firstItem="Ovp-yl-a4V" firstAttribute="bottom" secondItem="bXF-4l-RtH" secondAttribute="bottom" id="aPw-CE-jAs"/>
+                            <constraint firstItem="Ovp-yl-a4V" firstAttribute="top" secondItem="bXF-4l-RtH" secondAttribute="top" id="pUD-Xc-sKH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bXF-4l-RtH"/>
                     </view>
-                    <navigationItem key="navigationItem" id="LMo-Oo-yBU"/>
+                    <navigationItem key="navigationItem" title="히스토리" id="LMo-Oo-yBU"/>
+                    <connections>
+                        <outlet property="tableView" destination="Ovp-yl-a4V" id="dlQ-cE-hVf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YBM-R3-iI8" sceneMemberID="firstResponder"/>
             </objects>
