@@ -14,8 +14,8 @@ public enum SubjectAPIRouter: APIRouter {
 
     public var endPoint: EndPoint {
         switch self {
-        case .getSubjectList(let year, let month):
-            return EndPoint(path: "/subject?year=\(year)&month=\(month)", method: .get)
+        case .getSubjectList:
+            return EndPoint(path: "/subject", method: .get)
         }
     }
 
