@@ -6,3 +6,4 @@ github "onevcat/Kingfisher" ~> 4.0
 github "SnapKit/SnapKit" ~> 4.0.0
 github "DaveWoodCom/XCGLogger" ~> 6.0.2
 github "airbnb/lottie-ios" "master"
+github "RxSwiftCommunity/RxDataSources" ~> 3.0
