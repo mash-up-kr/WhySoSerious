@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Model
 
 public enum UserAPIRouter: APIRouter {
 
@@ -33,10 +34,16 @@ public enum UserAPIRouter: APIRouter {
 
     public var parameters: Parameters? {
         switch self {
-        case .register(let user):
-            return user.dictionaryRepresentation
-        case .getUserInfo(let user):
-            return user.dictionaryRepresentation
+        case .register(let user), .getUserInfo(let user):
+            return [
+                "uuid": user.uuid,
+                "id": user.id,
+                "nickname": user.nickname,
+                "age": user.age,
+                "bias": user.bias,
+                "introduce": user.introduce,
+                "gender": user.gender
+            ]
         }
     }
 }

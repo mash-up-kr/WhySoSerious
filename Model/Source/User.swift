@@ -8,32 +8,32 @@
 
 import Foundation
 
-public struct User {
+public struct User: Codable {
 
-    public var uuid = ""
-    public var id = 0
-    public var nickname = ""
-    public var age = 0
-    public var gender = Gender.male
-    public var bias = UserBias.red
-    public var introduce = ""
-
-    public var dictionaryRepresentation: [String: Any] {
-        return [
-            "uuid": uuid,
-            "id": id,
-            "nickname": nickname,
-            "age": age,
-            "bias": bias.rawValue,
-            "introduce": introduce,
-            "gender": gender.rawValue
-        ]
-    }
-
-    public init() { }
+    public var uuid: String
+    public var id: Int
+    public var nickname: String
+    public var age: Int
+    public var gender: Gender
+    public var bias: UserBias
+    public var introduce: String
 }
 
-public enum Gender: String {
+extension User {
+
+    // swiftlint:disable redundant_string_enum_value
+    enum CodingKeys: String, CodingKey {
+        case uuid = "uuid"
+        case id = "id"
+        case nickname = "nickname"
+        case age = "age"
+        case gender = "gender"
+        case bias = "bias"
+        case introduce = "introduce"
+    }
+}
+
+public enum Gender: String, Codable {
 
     case male
     case female
@@ -61,13 +61,23 @@ extension Gender: RawRepresentable {
     }
 }
 
-public enum UserBias: String {
+public enum UserBias: String, Codable {
 
     case blue
     case skyblue
     case mid
     case orange
     case red
+
+    public var smallFace: UIImage {
+        switch self {
+        case .blue: return #imageLiteral(resourceName: "02FaceBlue")
+        case .skyblue: return #imageLiteral(resourceName: "02FaceSky")
+        case .mid: return #imageLiteral(resourceName: "02FaceMarin")
+        case .orange: return #imageLiteral(resourceName: "02FaceOrange")
+        case .red: return #imageLiteral(resourceName: "02FaceRed")
+        }
+    }
 }
 
 extension UserBias: RawRepresentable {
