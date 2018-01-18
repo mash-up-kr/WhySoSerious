@@ -48,6 +48,9 @@ class PostViewModel {
         switch action {
         case .fetchPostList:
             fetchAction?()
+            .map { [SectionOfPost(items: $0)] }
+            .bind(to: sections)
+            .disposed(by: disposeBag)
         }
     }
 }

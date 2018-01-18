@@ -18,8 +18,17 @@ class PostViewController: UIViewController {
 
     let viewModel = PostViewModel()
     let disposeBag = DisposeBag()
+    var fetchAction: (() -> Observable<[Post]>)?
 
-    func fetchPostList() {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        viewModel.fetchAction = fetchAction
+
+        viewModel.sections
+            .asObservable()
+            .bind(to: tableView.rx.items(dataSource: PostViewController.dataSource()))
+            .disposed(by: disposeBag)
 
     }
 }

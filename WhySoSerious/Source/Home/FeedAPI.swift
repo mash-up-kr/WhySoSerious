@@ -14,25 +14,43 @@ import APIRouter
 
 extension APIService {
 
-    func fetchFeedList(subjectId: Int, count: Int, cursor: Int) -> Observable<[Post]> {
-        return Observable.create { observer -> Disposable in
-            NetworkRequestor.request(FeedAPIRouter.getFeed(subjectId, count, cursor)) { json, error in
-                if let error = error {
-                    observer.onError(error)
-                }
-                do {
-                    print(json)
-//                    let jsonString = json?["datas"].description ?? ""
-//                    let jsonData = jsonString.data(using: .utf8) ?? Data()
-//                    let posts = try JSONDecoder().decode([Post].self, from: jsonData)
-                    let posts: [Post] = []
-                    observer.onNext(posts)
-                    observer.onCompleted()
-                } catch {
-                    observer.onError(error)
-                }
+    func fetchFeedList(subjectId: Int, count: Int, cursor: Int, completion: @escaping (Feed) -> Void) {
+
+        NetworkRequestor.request(FeedAPIRouter.getFeed(subjectId, count, cursor)) { json, error in
+
+            if error != nil {
+                print("error in \(#function)")
+                return
             }
-            return Disposables.create()
+            print(json)
+            do {
+                let jsonString = json?["datas"].description ?? ""
+                let jsonData = jsonString.data(using: .utf8) ?? Data()
+                let feed = try JSONDecoder().decode(Feed.self, from: jsonData)
+                completion(feed)
+            } catch {
+                print("error in \(#function)")
+            }
+        }
+    }
+
+    func fetchSubject(today: String, completion: @escaping (Subject) -> Void) {
+
+        NetworkRequestor.request(SubjectAPIRouter.getSubject(today)) { json, error in
+
+            if error != nil {
+                print("error in \(#function)")
+                return
+            }
+            print(json)
+            do {
+                let jsonString = json?["datas"].description ?? ""
+                let jsonData = jsonString.data(using: .utf8) ?? Data()
+                let subject = try JSONDecoder().decode(Subject.self, from: jsonData)
+                completion(subject)
+            } catch {
+                print("error in \(#function)")
+            }
         }
     }
 }
