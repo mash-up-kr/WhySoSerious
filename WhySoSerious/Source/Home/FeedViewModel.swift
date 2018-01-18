@@ -20,8 +20,9 @@ class FeedViewModel {
 
     var action = PublishSubject<Action>()
     let disposeBag = DisposeBag()
-    var feed: Feed?
-    var subject: Variable<Subject>?
+
+    var feed = Variable<Feed?>(nil)
+    var subject = Variable<Subject?>(nil)
 
     init() {
         action
@@ -34,13 +35,15 @@ class FeedViewModel {
     func transform(action: Action) {
         switch action {
         case .fetchFeedList(let subjectId, let count, let cursor):
-            ServiceProvider.default.apiService.fetchFeedList(subjectId: subjectId, count: count, cursor: cursor) { [weak self] feed in
-                self?.feed = feed
-            }
+            ServiceProvider.default.apiService
+                .fetchFeedList(subjectId: subjectId, count: count, cursor: cursor)
+                .bind(to: feed)
+                .disposed(by: disposeBag)
         case .fetchSubject(let today):
-            ServiceProvider.default.apiService.fetchSubject(today: today) { [weak self] subject in
-                self?.subject = subject
-            }
+            ServiceProvider.default.apiService
+                .fetchSubject(today: today)
+                .bind(to: subject)
+                .disposed(by: disposeBag)
         }
     }
 }

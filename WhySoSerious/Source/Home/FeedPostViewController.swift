@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class FeedPostViewController: PostViewController {
 
     @IBOutlet weak var todaySubjectLabel: UILabel!
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+//        super.viewDidLoad()
+
     }
 }

@@ -13,7 +13,8 @@ import Model
 
 class FeedViewController: BaseViewController {
 
-    var feedPostViewController: FeedPostViewController?
+    // swiftlint:disable implicitly_unwrapped_optional
+    var feedPostViewController: FeedPostViewController!
 
     let viewModel = FeedViewModel()
     let disposeBag = DisposeBag()
@@ -21,7 +22,12 @@ class FeedViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.action.onNext(.fetchSubject(Date().nonSeperateFormat))
-        
+
+        viewModel.subject
+            .asObservable()
+            .map { $0?.title }
+            .bind(to: feedPostViewController.todaySubjectLabel.rx.text)
+            .disposed(by: disposeBag)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

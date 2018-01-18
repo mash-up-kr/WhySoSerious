@@ -34,10 +34,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="zaQ-fm-Ibu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mgn-eu-r4J"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zaQ-fm-Ibu" secondAttribute="trailing" id="Zqz-kB-672"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zaQ-fm-Ibu" secondAttribute="bottom" id="dDw-EW-ygh"/>
-                            <constraint firstItem="zaQ-fm-Ibu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uVq-Pd-hh7"/>
+                            <constraint firstItem="zaQ-fm-Ibu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2wd-37-bhn"/>
+                            <constraint firstItem="zaQ-fm-Ibu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="BwC-lk-AzC"/>
+                            <constraint firstItem="zaQ-fm-Ibu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kqv-Uu-9DZ"/>
+                            <constraint firstItem="zaQ-fm-Ibu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vJC-Nr-FBF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -63,15 +63,18 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subject" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKd-QN-NST">
-                                            <rect key="frame" x="158" y="40" width="59" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subject" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKd-QN-NST">
+                                            <rect key="frame" x="164" y="10" width="47" height="18"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="EKd-QN-NST" firstAttribute="top" secondItem="eVc-Dd-OtT" secondAttribute="top" constant="10" id="iEJ-7P-4VH"/>
+                                        <constraint firstItem="EKd-QN-NST" firstAttribute="centerX" secondItem="eVc-Dd-OtT" secondAttribute="centerX" id="iZy-Ig-lgT"/>
+                                    </constraints>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="180" id="DS5-5o-8Pb" customClass="PostCell" customModule="WhySoSerious" customModuleProvider="target">
