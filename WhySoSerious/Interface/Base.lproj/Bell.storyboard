@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Yu-tg-hS8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Yu-tg-hS8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,11 +25,11 @@
             </objects>
             <point key="canvasLocation" x="34" y="134"/>
         </scene>
-        <!--Item-->
+        <!--알림-->
         <scene sceneID="V3g-Fb-Dal">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Yu-tg-hS8" customClass="BaseNavigationController" customModule="WhySoSerious" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="NAX-eo-Ae3"/>
+                    <tabBarItem key="tabBarItem" title="알림" image="alert" id="NAX-eo-Ae3"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="d2d-WH-cSW">
@@ -47,4 +46,7 @@
             <point key="canvasLocation" x="-871" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="alert" width="20" height="25"/>
+    </resources>
 </document>

@@ -190,11 +190,11 @@
             </objects>
             <point key="canvasLocation" x="1292" y="134"/>
         </scene>
-        <!--Item-->
+        <!--히스토리-->
         <scene sceneID="6Bj-bT-bNn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bnv-2m-4gD" customClass="BaseNavigationController" customModule="WhySoSerious" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ehl-HN-Jxa"/>
+                    <tabBarItem key="tabBarItem" title="히스토리" image="history" id="ehl-HN-Jxa"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="8Jv-Qy-59z">
@@ -214,5 +214,6 @@
     <resources>
         <image name="arrowRight" width="20" height="20"/>
         <image name="arrowTableRight" width="28" height="28"/>
+        <image name="history" width="26" height="26"/>
     </resources>
 </document>
