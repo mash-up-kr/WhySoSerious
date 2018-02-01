@@ -69,7 +69,7 @@ class HistoryCell: UITableViewCell {
             guard let subject = subject else {
                 return
             }
-            subjectTitleLabel.text = subject.title
+            subjectTitleLabel.text = "\"\(subject.title)\""
             opinionCountLabel.text = "찬성 \(subject.agreeCount)  반대 \(subject.disagreeCount)  중립 \(subject.neutralCount)"
         }
     }

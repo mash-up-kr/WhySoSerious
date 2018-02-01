@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLk-vv-cIi">
-                                <rect key="frame" x="24" y="138" width="120" height="29"/>
+                                <rect key="frame" x="24" y="134" width="120" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="1gW-GM-auI"/>
                                     <constraint firstAttribute="height" constant="29" id="xLl-7Q-X0e"/>
@@ -50,7 +51,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“성주 사드 배치에 대한 생각은 어떠한가요?”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLS-jr-tAm">
                                                     <rect key="frame" x="32" y="16" width="290" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -103,11 +104,11 @@
                             <constraint firstItem="Ovp-yl-a4V" firstAttribute="leading" secondItem="bXF-4l-RtH" secondAttribute="leading" id="3NC-Vi-9f4"/>
                             <constraint firstItem="bXF-4l-RtH" firstAttribute="trailing" secondItem="GwJ-wu-JdS" secondAttribute="trailing" constant="24" id="Gty-tU-zr5"/>
                             <constraint firstItem="Ovp-yl-a4V" firstAttribute="trailing" secondItem="bXF-4l-RtH" secondAttribute="trailing" id="HGG-Bw-0b0"/>
-                            <constraint firstItem="GwJ-wu-JdS" firstAttribute="top" secondItem="wLk-vv-cIi" secondAttribute="bottom" constant="19" id="HlP-98-m2x"/>
+                            <constraint firstItem="GwJ-wu-JdS" firstAttribute="top" secondItem="wLk-vv-cIi" secondAttribute="bottom" constant="23" id="HlP-98-m2x"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wLk-vv-cIi" secondAttribute="trailing" constant="20" symbolic="YES" id="HzL-l0-5bt"/>
                             <constraint firstItem="wLk-vv-cIi" firstAttribute="leading" secondItem="bXF-4l-RtH" secondAttribute="leading" constant="24" id="I0w-Bj-X1A"/>
                             <constraint firstItem="Ovp-yl-a4V" firstAttribute="top" secondItem="GwJ-wu-JdS" secondAttribute="bottom" constant="0.5" id="RTo-ea-bUg"/>
-                            <constraint firstItem="wLk-vv-cIi" firstAttribute="top" secondItem="bXF-4l-RtH" secondAttribute="top" constant="22" id="YPr-DD-iXv"/>
+                            <constraint firstItem="wLk-vv-cIi" firstAttribute="top" secondItem="bXF-4l-RtH" secondAttribute="top" constant="18" id="YPr-DD-iXv"/>
                             <constraint firstItem="Ovp-yl-a4V" firstAttribute="bottom" secondItem="bXF-4l-RtH" secondAttribute="bottom" id="aPw-CE-jAs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bXF-4l-RtH"/>
@@ -178,7 +179,7 @@
                             <constraint firstItem="KEL-c4-GeF" firstAttribute="leading" secondItem="8qS-Ld-hsa" secondAttribute="leading" id="16L-QO-ABM"/>
                             <constraint firstItem="KEL-c4-GeF" firstAttribute="top" secondItem="u73-nF-rUH" secondAttribute="top" id="Uzg-35-BCj"/>
                             <constraint firstItem="8qS-Ld-hsa" firstAttribute="trailing" secondItem="KEL-c4-GeF" secondAttribute="trailing" id="cpX-BN-qug"/>
-                            <constraint firstItem="8qS-Ld-hsa" firstAttribute="bottom" secondItem="KEL-c4-GeF" secondAttribute="bottom" id="oG5-nj-tnh"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="KEL-c4-GeF" secondAttribute="bottom" id="eXZ-Pr-1L9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8qS-Ld-hsa"/>
                     </view>

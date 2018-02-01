@@ -24,6 +24,10 @@ class BaseNavigationController: UINavigationController {
         navigationBar.tintColor = #colorLiteral(red: 0.1450980392, green: 0.1882352941, blue: 0.2470588235, alpha: 1)
         navigationBar.shadowImage = UIImage.image(with: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
         navigationBar.layoutMargins = UIEdgeInsets(top: 0, left: 32, bottom: 0, right: 0)
+        navigationBar.largeTitleTextAttributes = [
+            NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.1450980392, green: 0.1882352941, blue: 0.2470588235, alpha: 1),
+            NSAttributedStringKey.font: UIFont(name: "AppleSDGothicNeo-Bold", size: 44) ?? 0
+        ]
 
         navigationBar.layer.rx.observe(CGRect.self, "bounds")
             .map(updateTitle(at: ))
