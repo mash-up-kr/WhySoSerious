@@ -14,6 +14,9 @@ public struct Subject: Codable {
     public var title: String
     public var createDate: String
     public var publishedDate: String
+    public var agreeCount: Int
+    public var disagreeCount: Int
+    public var neutralCount: Int
 }
 
 extension Subject {
@@ -23,5 +26,8 @@ extension Subject {
         case title = "title"
         case createDate = "createdAt"
         case publishedDate = "publishedAt"
+        case agreeCount = "agreeCount"
+        case disagreeCount = "disagreeCount"
+        case neutralCount = "neutralCount"
     }
 }
