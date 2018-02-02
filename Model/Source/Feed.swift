@@ -10,18 +10,47 @@ import Foundation
 
 public struct Author: Codable {
 
+    public var id: Int
     public var nickname: String
     public var bias: UserBias
     public var introduce: String
+    public var createDate: String
+}
+
+extension Author {
+
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case nickname = "nickname"
+        case bias = "bias"
+        case introduce = "introduce"
+        case createDate = "createdAt"
+    }
+}
+
+public struct FeedSubject: Codable {
+
     public var id: Int
-    public var createdAt: String
+    public var title: String
+    public var createDate: String
+    public var publishedDate: String
+}
+
+extension FeedSubject {
+
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case title = "title"
+        case createDate = "createdAt"
+        case publishedDate = "publishedAt"
+    }
 }
 
 public struct Feed: Codable {
 
     public var id: Int
     public var author: Author
-    public var subject: Subject
+    public var subject: FeedSubject
     public var title: String
     public var contents: String
     public var subjectReaction: Reaction

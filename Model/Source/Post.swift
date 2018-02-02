@@ -12,7 +12,7 @@ public struct Post: Codable {
 
     public var id: Int
     public var author: Author
-    public var subject: Subject
+    public var subject: FeedSubject
     public var title: String
     public var contents: String
     public var subjectReaction: Reaction
@@ -22,7 +22,7 @@ public struct Post: Codable {
     public var myReaction: Reaction
     public var createdAt: String
 
-    public init(id: Int, author: Author, subject: Subject, title: String, contents: String, subjectReaction: Reaction, agreeCount: Int, neutralCount: Int, disagreeCount: Int, myReaction: Reaction, createdAt: String) {
+    public init(id: Int, author: Author, subject: FeedSubject, title: String, contents: String, subjectReaction: Reaction, agreeCount: Int, neutralCount: Int, disagreeCount: Int, myReaction: Reaction, createdAt: String) {
         self.id = id
         self.author = author
         self.subject = subject
