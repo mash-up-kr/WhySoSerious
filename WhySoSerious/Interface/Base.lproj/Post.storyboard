@@ -61,6 +61,9 @@
                                                         <constraint firstAttribute="height" constant="28" id="LGl-dE-d44"/>
                                                         <constraint firstAttribute="width" constant="28" id="dSm-QH-1TG"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="optionButtonClick:" destination="yPX-XE-beQ" eventType="touchUpInside" id="N22-33-fxq"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정치적 타이틀을 작성하는 라벨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vex-nc-RTy">
                                                     <rect key="frame" x="32" y="51" width="217" height="22"/>
@@ -222,6 +225,21 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="02BoxAgree" translatesAutoresizingMaskIntoConstraints="NO" id="c67-fk-Jvn">
                                                     <rect key="frame" x="135.5" y="12" width="21" height="10"/>
                                                 </imageView>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhK-eA-CRX">
+                                                    <rect key="frame" x="269" y="28" width="80" height="28"/>
+                                                    <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="MQN-RD-mj3"/>
+                                                        <constraint firstAttribute="height" constant="28" id="zz8-fB-6fP"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <state key="normal" title="신고하기">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="reportButtonClick:" destination="yPX-XE-beQ" eventType="touchUpInside" id="wg2-zC-Ff6"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="PzG-7d-Hoo" firstAttribute="top" secondItem="wUe-38-DDD" secondAttribute="top" id="3Av-hJ-uvP"/>
@@ -236,6 +254,7 @@
                                                 <constraint firstItem="pLg-ba-idG" firstAttribute="top" secondItem="qB9-rM-avc" secondAttribute="bottom" constant="0.5" id="QWb-uv-9ds"/>
                                                 <constraint firstItem="yt3-Tg-Dd8" firstAttribute="leading" secondItem="KPj-7v-rPr" secondAttribute="leading" constant="23" id="Qcr-ao-WVK"/>
                                                 <constraint firstItem="7Cv-dc-1a6" firstAttribute="leading" secondItem="Fct-Ac-Pkv" secondAttribute="leading" id="RAr-2C-E2y"/>
+                                                <constraint firstItem="fhK-eA-CRX" firstAttribute="top" secondItem="XqS-YO-vVT" secondAttribute="bottom" constant="-11" id="TVw-ea-q7j"/>
                                                 <constraint firstItem="RAe-pE-2ox" firstAttribute="top" secondItem="wUe-38-DDD" secondAttribute="top" id="UXe-UY-BGZ"/>
                                                 <constraint firstItem="qB9-rM-avc" firstAttribute="leading" secondItem="KPj-7v-rPr" secondAttribute="leading" constant="23" id="Vuh-Eu-o0Z"/>
                                                 <constraint firstItem="7UH-N0-T8b" firstAttribute="top" secondItem="Fct-Ac-Pkv" secondAttribute="bottom" constant="8" id="XrH-6k-bEt"/>
@@ -247,6 +266,7 @@
                                                 <constraint firstItem="vex-nc-RTy" firstAttribute="top" secondItem="wUe-38-DDD" secondAttribute="bottom" constant="12" id="eTz-Dc-VRf"/>
                                                 <constraint firstItem="ngE-Wf-ZLE" firstAttribute="top" secondItem="yt3-Tg-Dd8" secondAttribute="bottom" id="fmr-2a-S5t"/>
                                                 <constraint firstItem="Fct-Ac-Pkv" firstAttribute="top" secondItem="vex-nc-RTy" secondAttribute="bottom" constant="4" id="gXG-1x-2jJ"/>
+                                                <constraint firstItem="fhK-eA-CRX" firstAttribute="trailing" secondItem="XqS-YO-vVT" secondAttribute="trailing" constant="-10" id="gzM-9w-A0S"/>
                                                 <constraint firstItem="wUe-38-DDD" firstAttribute="leading" secondItem="KPj-7v-rPr" secondAttribute="leading" constant="32" id="jGc-A2-I9w"/>
                                                 <constraint firstItem="pLg-ba-idG" firstAttribute="trailing" secondItem="qB9-rM-avc" secondAttribute="trailing" id="pgk-HE-Hrw"/>
                                                 <constraint firstItem="qB9-rM-avc" firstAttribute="top" secondItem="7UH-N0-T8b" secondAttribute="bottom" constant="4" id="ppn-vc-9xi"/>
@@ -274,11 +294,16 @@
                                             <outlet property="neutralLabel" destination="uRL-JS-cbw" id="tCx-wb-KVf"/>
                                             <outlet property="nickNameLabel" destination="PzG-7d-Hoo" id="0qT-HK-owr"/>
                                             <outlet property="reactionImageView" destination="c67-fk-Jvn" id="s3H-ox-ufx"/>
+                                            <outlet property="reportButton" destination="fhK-eA-CRX" id="F0b-os-vF3"/>
                                             <outlet property="responseStackView" destination="7UH-N0-T8b" id="4xG-jE-wqY"/>
                                             <outlet property="titleLabel" destination="vex-nc-RTy" id="jeE-41-cPE"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bzs-Qe-1mf" id="ohK-Yq-e5I"/>
+                                    <outlet property="delegate" destination="bzs-Qe-1mf" id="p9t-mp-PhQ"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -11,7 +11,7 @@ import Foundation
 public struct Post: Codable {
 
     public var id: Int
-    public var author: User
+    public var author: Author
     public var subject: Subject
     public var title: String
     public var contents: String
@@ -21,6 +21,20 @@ public struct Post: Codable {
     public var disagreeCount: Int
     public var myReaction: Reaction
     public var createdAt: String
+
+    public init(id: Int, author: Author, subject: Subject, title: String, contents: String, subjectReaction: Reaction, agreeCount: Int, neutralCount: Int, disagreeCount: Int, myReaction: Reaction, createdAt: String) {
+        self.id = id
+        self.author = author
+        self.subject = subject
+        self.title = title
+        self.contents = contents
+        self.subjectReaction = subjectReaction
+        self.agreeCount = agreeCount
+        self.neutralCount = neutralCount
+        self.disagreeCount = disagreeCount
+        self.myReaction = myReaction
+        self.createdAt = createdAt
+    }
 }
 
 extension Post {
@@ -42,31 +56,35 @@ extension Post {
 }
 
 public enum Reaction: String, Codable {
+    case none
     case agree = "AGREE"
     case disagree = "DISAGREE"
     case neutral = "NEUTRAL"
 
-    public var reactionBoxImage: UIImage {
+    public var reactionBoxImage: UIImage? {
         switch self {
         case .agree: return #imageLiteral(resourceName: "02BoxAgree")
         case .disagree: return #imageLiteral(resourceName: "02BoxDisagree")
         case .neutral: return #imageLiteral(resourceName: "02BoxAgreeCopy")
+        default: return nil
         }
     }
 
-    public var reactionNormalImage: UIImage {
+    public var reactionNormalImage: UIImage? {
         switch self {
         case .agree: return #imageLiteral(resourceName: "02ReactDefault1")
         case .disagree: return #imageLiteral(resourceName: "02ReactDefault2")
         case .neutral: return #imageLiteral(resourceName: "02ReactDefault3")
+        default: return nil
         }
     }
 
-    public var reactionActiveImage: UIImage {
+    public var reactionActiveImage: UIImage? {
         switch self {
         case .agree: return #imageLiteral(resourceName: "02ReactAct1")
         case .disagree: return #imageLiteral(resourceName: "02ReactAct2")
         case .neutral: return #imageLiteral(resourceName: "02ReactAct3")
+        default: return nil
         }
     }
 }

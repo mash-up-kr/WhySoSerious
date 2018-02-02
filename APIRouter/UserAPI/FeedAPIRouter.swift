@@ -8,6 +8,7 @@
 
 import Foundation
 
+let uuid = "0DDDEA82-4B36-4105-B235-E8CA7F441D28"
 public enum FeedAPIRouter: APIRouter {
 
     case getFeed(Int, Int, Int)
@@ -22,7 +23,7 @@ public enum FeedAPIRouter: APIRouter {
     public var headers: HTTPHeaders? {
         switch self {
         case .getFeed:
-            return nil
+            return ["uuid": uuid]
         }
     }
 

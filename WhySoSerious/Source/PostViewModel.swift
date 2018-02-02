@@ -26,31 +26,4 @@ extension SectionOfPost: SectionModelType {
 
 class PostViewModel {
 
-    enum Action {
-        case fetchPostList
-    }
-
-    var action = PublishSubject<Action>()
-    var sections = Variable<[SectionOfPost]>([])
-    var fetchAction: (() -> Observable<[Post]>)?
-
-    let disposeBag = DisposeBag()
-
-    init() {
-        action
-            .subscribe(onNext: { [weak self] event in
-                self?.transform(action: event)
-            })
-            .disposed(by: disposeBag)
-    }
-
-    func transform(action: Action) {
-        switch action {
-        case .fetchPostList:
-            fetchAction?()
-            .map { [SectionOfPost(items: $0)] }
-            .bind(to: sections)
-            .disposed(by: disposeBag)
-        }
-    }
 }

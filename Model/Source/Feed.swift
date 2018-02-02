@@ -8,19 +8,44 @@
 
 import Foundation
 
+public struct Author: Codable {
+
+    public var nickname: String
+    public var bias: UserBias
+    public var introduce: String
+    public var id: Int
+    public var createdAt: String
+}
+
 public struct Feed: Codable {
 
-    public var cursor: Int
-    public var totalCount: Int
-    public var posts: [Post]
+    public var id: Int
+    public var author: Author
+    public var subject: Subject
+    public var title: String
+    public var contents: String
+    public var subjectReaction: Reaction
+    public var agreeCount: Int
+    public var neutralCount: Int
+    public var disagreeCount: Int
+    public var myReaction: Reaction
+    public var createdAt: String
 }
 
 extension Feed {
 
     // swiftlint:disable redundant_string_enum_value
     enum CodingKeys: String, CodingKey {
-        case cursor = "cursor"
-        case totalCount = "totalCount"
-        case posts = "data"
+        case id = "id"
+        case author = "author"
+        case subject = "subject"
+        case title = "title"
+        case contents = "contents"
+        case subjectReaction = "subjectReaction"
+        case agreeCount = "agreeCount"
+        case neutralCount = "neutralCount"
+        case disagreeCount = "disagreeCount"
+        case myReaction = "myReaction"
+        case createdAt = "createdAt"
     }
 }

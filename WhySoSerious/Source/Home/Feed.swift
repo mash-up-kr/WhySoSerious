@@ -25,7 +25,7 @@ class FeedViewController: BaseViewController {
 
         viewModel.subject
             .asObservable()
-            .map { $0?.title }
+            .map { $0?.title ?? "가상화폐에 대한 현실" }
             .bind(to: feedPostViewController.todaySubjectLabel.rx.text)
             .disposed(by: disposeBag)
     }

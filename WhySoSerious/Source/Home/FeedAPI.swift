@@ -14,24 +14,17 @@ import APIRouter
 
 extension APIService {
 
-    func fetchFeedList(subjectId: Int, count: Int, cursor: Int) -> Observable<Feed> {
-        print(subjectId)
-        return Observable.create { observer -> Disposable in
-            NetworkRequestor.request(FeedAPIRouter.getFeed(subjectId, count, cursor)) { json, error in
-                if let error = error {
-                    observer.onError(error)
-                }
-                do {
-                    let jsonString = json?["datas"].description ?? ""
-                    let jsonData = jsonString.data(using: .utf8) ?? Data()
-                    let feed = try JSONDecoder().decode(Feed.self, from: jsonData)
-                    observer.onNext(feed)
-                    observer.onCompleted()
-                } catch {
-                    observer.onError(error)
-                }
+    func fetchFeedList(subjectId: Int, count: Int, cursor: Int, completion: (([Feed]) -> Void)?) {
+        NetworkRequestor.request(FeedAPIRouter.getFeed(subjectId, count, cursor)) { json, error in
+            do {
+                let jsonString = json?["datas"].description ?? ""
+                print(jsonString)
+                let jsonData = jsonString.data(using: .utf8) ?? Data()
+                let feed = try JSONDecoder().decode([Feed].self, from: jsonData)
+                completion?(feed)
+            } catch {
+                print(error)
             }
-            return Disposables.create()
         }
     }
 
