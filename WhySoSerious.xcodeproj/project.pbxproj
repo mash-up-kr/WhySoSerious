@@ -133,6 +133,8 @@
 		C94BC1EB1D0599FE37CA1D39 /* Pods_APIRouterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A63C8AB1AD522B3A807C98 /* Pods_APIRouterTests.framework */; };
 		CDCCB664DA7ACFA658895DDE /* Pods_NetworkWatcherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DFAD42CB91BBEE722C2438 /* Pods_NetworkWatcherTests.framework */; };
 		CE0175ED2024EEA2007BDF74 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0175EC2024EEA2007BDF74 /* Subject.swift */; };
+		CE0175EF2024F2D4007BDF74 /* Write.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0175EE2024F2D4007BDF74 /* Write.swift */; };
+		CE0175F1202500F1007BDF74 /* WritePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0175F0202500F1007BDF74 /* WritePopupViewController.swift */; };
 		CECAA81F2010CD1C00ACF846 /* FeedPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAA81E2010CD1C00ACF846 /* FeedPostViewController.swift */; };
 		CECAA8212010CF3600ACF846 /* Date+WhySoSerious.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAA8202010CF3600ACF846 /* Date+WhySoSerious.swift */; };
 /* End PBXBuildFile section */
@@ -378,7 +380,6 @@
 		4A0D3DBE2004DE2700E7746B /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		4A0D3DC72004E1B600E7746B /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		4A0D3DC92004E1CD00E7746B /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
-		4A0D3DCA2004E1CF00E7746B /* Write.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Write.swift; sourceTree = "<group>"; };
 		4A0D3DCB2004E1D000E7746B /* Bell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bell.swift; sourceTree = "<group>"; };
 		4A0D3DCC2004E1D200E7746B /* My.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My.swift; sourceTree = "<group>"; };
 		4A0D3DCE2004E6D800E7746B /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
@@ -516,6 +517,8 @@
 		BBC8B8964E6F230CFEE2BF90 /* Pods-AuthManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthManagerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AuthManagerTests/Pods-AuthManagerTests.release.xcconfig"; sourceTree = "<group>"; };
 		CA536BCE3DD73B2206E25947 /* Pods-NetworkWatcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkWatcher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkWatcher/Pods-NetworkWatcher.debug.xcconfig"; sourceTree = "<group>"; };
 		CE0175EC2024EEA2007BDF74 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		CE0175EE2024F2D4007BDF74 /* Write.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Write.swift; sourceTree = "<group>"; };
+		CE0175F0202500F1007BDF74 /* WritePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritePopupViewController.swift; sourceTree = "<group>"; };
 		CECAA81E2010CD1C00ACF846 /* FeedPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPostViewController.swift; sourceTree = "<group>"; };
 		CECAA8202010CF3600ACF846 /* Date+WhySoSerious.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+WhySoSerious.swift"; sourceTree = "<group>"; };
 		D08F89BB848910C523871EC3 /* Pods-AuthManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthManagerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AuthManagerTests/Pods-AuthManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -755,8 +758,9 @@
 		4A0D3DC22004E18000E7746B /* Write */ = {
 			isa = PBXGroup;
 			children = (
-				4A0D3DCA2004E1CF00E7746B /* Write.swift */,
 				4A0D3DD22004E6E800E7746B /* WriteViewModel.swift */,
+				CE0175EE2024F2D4007BDF74 /* Write.swift */,
+				CE0175F0202500F1007BDF74 /* WritePopupViewController.swift */,
 			);
 			path = Write;
 			sourceTree = "<group>";
@@ -3060,7 +3064,9 @@
 				4A0D3DD72004E75900E7746B /* MyViewModel.swift in Sources */,
 				4A0D3DBF2004DE2700E7746B /* BaseTabBarController.swift in Sources */,
 				4A307EDC200D98D200C34194 /* History.swift in Sources */,
+				CE0175EF2024F2D4007BDF74 /* Write.swift in Sources */,
 				4A4592751FDCDB1900450CFC /* AppDelegate.swift in Sources */,
+				CE0175F1202500F1007BDF74 /* WritePopupViewController.swift in Sources */,
 				4A307EE8200DCCF800C34194 /* APIService.swift in Sources */,
 				4A0D3DBB2004DE1000E7746B /* BaseNavigationController.swift in Sources */,
 				4A0D3DD32004E6E800E7746B /* WriteViewModel.swift in Sources */,

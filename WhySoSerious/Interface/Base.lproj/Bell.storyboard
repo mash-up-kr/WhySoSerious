@@ -29,7 +29,7 @@
         <scene sceneID="V3g-Fb-Dal">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Yu-tg-hS8" customClass="BaseNavigationController" customModule="WhySoSerious" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="알림" image="alert" id="NAX-eo-Ae3"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="알림" image="alert" id="NAX-eo-Ae3"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="d2d-WH-cSW">

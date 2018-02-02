@@ -31,7 +31,7 @@
         <scene sceneID="hcJ-K2-6ml">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gow-kl-sLJ" customClass="BaseNavigationController" customModule="WhySoSerious" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="마이페이지" image="mypage" id="eqa-XE-ssE"/>
+                    <tabBarItem key="tabBarItem" tag="4" title="마이페이지" image="mypage" id="eqa-XE-ssE"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="tZm-5q-ha2">
