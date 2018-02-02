@@ -88,6 +88,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="19"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="fb6-Uz-o4Y" id="EMw-RX-f0t"/>
+                                        </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xed-zO-ewc">
                                         <rect key="frame" x="32" y="107.5" width="311" height="1"/>
@@ -102,14 +105,23 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5q-d7-eQk">
                                                 <rect key="frame" x="0.0" y="0.0" width="100.5" height="32"/>
                                                 <state key="normal" title="Button" image="04AgreeButton"/>
+                                                <connections>
+                                                    <action selector="feedBackAction:" destination="fb6-Uz-o4Y" eventType="touchUpInside" id="X0E-Uf-GVI"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gm5-fC-85K">
                                                 <rect key="frame" x="105.5" y="0.0" width="100" height="32"/>
                                                 <state key="normal" title="Button" image="04DisagreeButton"/>
+                                                <connections>
+                                                    <action selector="feedBackAction:" destination="fb6-Uz-o4Y" eventType="touchUpInside" id="a9d-tm-gdo"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMf-O2-cpx">
                                                 <rect key="frame" x="210.5" y="0.0" width="100.5" height="32"/>
                                                 <state key="normal" title="Button" image="04NeutralityButton"/>
+                                                <connections>
+                                                    <action selector="feedBackAction:" destination="fb6-Uz-o4Y" eventType="touchUpInside" id="uGf-DS-SEt"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -231,8 +243,12 @@
                         <viewLayoutGuide key="safeArea" id="t7v-V3-cJY"/>
                     </view>
                     <connections>
+                        <outlet property="agreeBtn" destination="u5q-d7-eQk" id="yRc-O3-3rg"/>
                         <outlet property="contentTextView" destination="pvB-wc-ejN" id="Xzi-CY-EzR"/>
+                        <outlet property="disagreeBtn" destination="Gm5-fC-85K" id="O5p-GH-YIv"/>
+                        <outlet property="neutralBtn" destination="RMf-O2-cpx" id="Ckb-A0-bBd"/>
                         <outlet property="tempSaveView" destination="C9d-MM-Cyc" id="isn-OA-BZ0"/>
+                        <outlet property="textCountLabel" destination="jZm-TQ-r0W" id="hk7-I0-Tdq"/>
                         <outlet property="titleLabel" destination="OWE-BW-9CL" id="ZH1-e8-QsY"/>
                         <outlet property="titleTextField" destination="qcr-fq-npY" id="jxc-C8-JL6"/>
                     </connections>
