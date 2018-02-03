@@ -12,7 +12,7 @@ import RxSwift
 import RxDataSources
 import Model
 
-class PostViewController: UIViewController {
+class PostViewController: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
 

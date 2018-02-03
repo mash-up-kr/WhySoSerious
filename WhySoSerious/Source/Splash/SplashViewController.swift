@@ -22,8 +22,7 @@ class SplashViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         splashLottieAnimationView.play { _ in
-            let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
-            UIApplication.shared.delegate?.window??.rootViewController = tabBarController
+            self.performSegue(withIdentifier: "ShowTutorial", sender: nil)
         }
     }
 }

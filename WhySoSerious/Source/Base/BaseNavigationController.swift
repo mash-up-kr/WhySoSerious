@@ -29,20 +29,9 @@ class BaseNavigationController: UINavigationController {
             NSAttributedStringKey.font: UIFont(name: "AppleSDGothicNeo-Bold", size: 44) ?? 0
         ]
 
-        navigationBar.layer.rx.observe(CGRect.self, "bounds")
-            .map(updateTitle(at: ))
-            .subscribe(onNext: { [weak self] title in
-                self?.navigationItem.title = title
-            })
-            .disposed(by: disposeBag)
-    }
-
-    func updateTitle(at rect: CGRect?) -> String? {
-        let smallNavigationBarHeight: CGFloat = 44
-        if (rect?.height ?? 0) <= smallNavigationBarHeight {
-            return smallTitle
-        } else {
-            return largeTitle
-        }
+        navigationBar.titleTextAttributes = [
+            NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.1450980392, green: 0.1882352941, blue: 0.2470588235, alpha: 1),
+            NSAttributedStringKey.font: UIFont(name: "AppleSDGothicNeo-Regular", size: 14) ?? 0
+        ]
     }
 }

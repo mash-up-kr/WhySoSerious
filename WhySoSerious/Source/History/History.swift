@@ -36,6 +36,23 @@ class HistoryViewController: BaseViewController {
                 self?.performSegue(withIdentifier: "SelectDate", sender: nil)
             }
             .disposed(by: disposeBag)
+
+        tableView.rx
+            .modelSelected(Subject.self)
+            .subscribe(onNext: { [weak self] subject in
+                self?.performSegue(withIdentifier: "ShowEnd", sender: subject)
+            })
+            .disposed(by: disposeBag)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowEnd" {
+            if let subject = sender as? Subject {
+                if let vc = segue.destination as? HistoryEndViewController {
+                    vc.title = subject.title
+                }
+            }
+        }
     }
 }
 

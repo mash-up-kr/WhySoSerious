@@ -18,12 +18,10 @@ extension APIService {
         NetworkRequestor.request(FeedAPIRouter.getFeed(subjectId, count, cursor)) { json, error in
             do {
                 let jsonString = json?["datas"].description ?? ""
-                print(jsonString)
                 let jsonData = jsonString.data(using: .utf8) ?? Data()
                 let feed = try JSONDecoder().decode([Feed].self, from: jsonData)
                 completion?(feed)
             } catch {
-                print(error)
             }
         }
     }

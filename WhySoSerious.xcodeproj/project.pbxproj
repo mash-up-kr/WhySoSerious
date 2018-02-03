@@ -84,6 +84,8 @@
 		4A45927A1FDCDB1900450CFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4592781FDCDB1900450CFC /* Main.storyboard */; };
 		4A45927C1FDCDB1900450CFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A45927B1FDCDB1900450CFC /* Assets.xcassets */; };
 		4A45927F1FDCDB1900450CFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A45927D1FDCDB1900450CFC /* LaunchScreen.storyboard */; };
+		4A5A921B20259381002FB8C0 /* HistoryEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5A921A20259381002FB8C0 /* HistoryEnd.swift */; };
+		4A5A921D20259A3A002FB8C0 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5A921C20259A3A002FB8C0 /* TutorialViewController.swift */; };
 		4A5C362E2000AAD200BA7153 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5C362D2000AAD200BA7153 /* Lottie.framework */; };
 		4A5C36312000AB8400BA7153 /* splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A5C36302000AB8400BA7153 /* splash.json */; };
 		4A88F2681FEE64AA00A86DA1 /* ResolutionCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A88F2671FEE64AA00A86DA1 /* ResolutionCenter.swift */; };
@@ -455,6 +457,8 @@
 		4A45927B1FDCDB1900450CFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A45927E1FDCDB1900450CFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A4592801FDCDB1900450CFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A5A921A20259381002FB8C0 /* HistoryEnd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEnd.swift; sourceTree = "<group>"; };
+		4A5A921C20259A3A002FB8C0 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		4A5C362D2000AAD200BA7153 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		4A5C36302000AB8400BA7153 /* splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splash.json; sourceTree = "<group>"; };
 		4A88F2671FEE64AA00A86DA1 /* ResolutionCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolutionCenter.swift; sourceTree = "<group>"; };
@@ -751,6 +755,7 @@
 				4A0D3DD02004E6E000E7746B /* HistoryViewModel.swift */,
 				4A307EE9200DCD1B00C34194 /* HistoryAPI.swift */,
 				4A1919A220237A5800B2EA31 /* HistorySelectDate.swift */,
+				4A5A921A20259381002FB8C0 /* HistoryEnd.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -787,6 +792,7 @@
 			isa = PBXGroup;
 			children = (
 				4A1919AD20237F5500B2EA31 /* SplashViewController.swift */,
+				4A5A921C20259A3A002FB8C0 /* TutorialViewController.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -3051,11 +3057,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A5A921B20259381002FB8C0 /* HistoryEnd.swift in Sources */,
 				CECAA81F2010CD1C00ACF846 /* FeedPostViewController.swift in Sources */,
 				4A0D3DC82004E1B600E7746B /* Feed.swift in Sources */,
 				4A0D3DD52004E6EF00E7746B /* BellViewModel.swift in Sources */,
 				B8C4F2AF200F90EE00B24FA1 /* FeedAPI.swift in Sources */,
 				4A1919A320237A5800B2EA31 /* HistorySelectDate.swift in Sources */,
+				4A5A921D20259A3A002FB8C0 /* TutorialViewController.swift in Sources */,
 				4A1919AE20237F5500B2EA31 /* SplashViewController.swift in Sources */,
 				4A0D3DBD2004DE1B00E7746B /* BaseViewController.swift in Sources */,
 				4A0D3DCF2004E6D800E7746B /* FeedViewModel.swift in Sources */,

@@ -17,11 +17,10 @@ class FeedPostViewController: PostViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
     }
 
-    func setup() {
-        ServiceProvider.default.apiService.fetchFeedList(subjectId: 11, count: 15, cursor: 0) { [weak self] feeds in
+    func fetch(subjectID: Int) {
+        ServiceProvider.default.apiService.fetchFeedList(subjectId: subjectID, count: 15, cursor: 0) { [weak self] feeds in
             var posts: [Post] = []
             feeds.forEach {
                 let post = Post(id: $0.id, author: $0.author, subject: $0.subject, title: $0.title, contents: $0.contents, subjectReaction: $0.subjectReaction, agreeCount: $0.agreeCount, neutralCount: $0.neutralCount, disagreeCount: $0.disagreeCount, myReaction: $0.myReaction, createdAt: $0.createdAt)

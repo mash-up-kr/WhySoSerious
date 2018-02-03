@@ -38,7 +38,7 @@
                                     <constraint firstAttribute="height" constant="0.5" id="s7K-Td-Uax"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ovp-yl-a4V">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ovp-yl-a4V">
                                 <rect key="frame" x="0.0" y="186.5" width="375" height="431.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -118,6 +118,7 @@
                         <outlet property="historyDateButton" destination="wLk-vv-cIi" id="iR3-cH-fC3"/>
                         <outlet property="tableView" destination="Ovp-yl-a4V" id="dlQ-cE-hVf"/>
                         <segue destination="fQT-pO-AxT" kind="presentation" identifier="SelectDate" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="nK9-1F-tAa"/>
+                        <segue destination="tKX-wR-7bB" kind="show" identifier="ShowEnd" id="njK-Mn-CpA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YBM-R3-iI8" sceneMemberID="firstResponder"/>
@@ -190,6 +191,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L2r-n5-8PZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1292" y="134"/>
+        </scene>
+        <!--History End View Controller-->
+        <scene sceneID="Guc-bV-BcH">
+            <objects>
+                <viewController id="tKX-wR-7bB" customClass="HistoryEndViewController" customModule="WhySoSerious" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AYd-iN-mXi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="I89-RR-c1j"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DDN-9s-DSd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="862"/>
         </scene>
         <!--히스토리-->
         <scene sceneID="6Bj-bT-bNn">
